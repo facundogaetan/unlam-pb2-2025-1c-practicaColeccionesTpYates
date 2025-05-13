@@ -32,6 +32,12 @@ public class Fondeadero {
 		return yates.size();
 		
 	}
+
+	public int getCantidadDeAmarrasDisponibles() {
+		int amarrasDisponibles = 0;
+		amarrasDisponibles = cantidadMaxDeAmarras - getCantidadDeYates();
+		return amarrasDisponibles;
+	}
 	
 	
 

@@ -66,7 +66,28 @@ public class FondeaderoTest {
 		assertEquals(4, nuevoFondeadero.getCantidadDeYates());
 
 	}
-	
-	// 5. obtenerCantidadDeAmarrasDisponibles: devuelve el total de amarras libres. 
+
+	// 5. obtenerCantidadDeAmarrasDisponibles: devuelve el total de amarras libres.
+
+	@Test
+	public void dadoQueExisteUnFondeaderoPuedoSaberCuantasAmarrasDisponiblesHay() {
+		Fondeadero nuevoFondeadero = new Fondeadero(70);
+
+		// creamos y agregamos 4 yates
+		
+		Yate nuevoYate = new Yate();
+		Yate nuevoYate2 = new Yate();
+		Yate nuevoYate3 = new Yate();
+		Yate nuevoYate4 = new Yate();
+
+		nuevoFondeadero.amarrarYate(nuevoYate);
+		nuevoFondeadero.amarrarYate(nuevoYate2);
+		nuevoFondeadero.amarrarYate(nuevoYate3);
+		nuevoFondeadero.amarrarYate(nuevoYate4);
+		
+		int cantidadObtenida = nuevoFondeadero.getCantidadDeAmarrasDisponibles();
+		
+		assertEquals(66, nuevoFondeadero.getCantidadDeAmarrasDisponibles());
+	}
 
 }
